@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-app
+spec:
+  selector:
+    matchLabels:
+      app: simple-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: simple-app
+    spec:
+      containers:
+      - name: simple-go-app
+        image: rminix/http-request-headers:v1
+        ports:
+        - containerPort: 8080
