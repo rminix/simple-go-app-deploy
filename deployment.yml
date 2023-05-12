@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: simple-go-app
-        image: rminix/http-request-headers:v1
+        image: rminix/echo-http-headers:v1
         ports:
         - containerPort: 8080
