@@ -9,6 +9,12 @@ spec:
     repoURL: https://gitlab.com/rminix/simple-go-app-deploy.git
     targetRevision: HEAD
     path: dev
+    helm:
+      valueFiles:
+        - values.yaml
+      parameters:
+        - name: project_name
+          value: "test11"
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
