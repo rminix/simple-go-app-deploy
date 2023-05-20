@@ -15,5 +15,8 @@ spec:
       containers:
       - name: simple-go-app
         image: rminix/echo-http-headers:v1
+        env:
+        - name: project
+          value: {{ .Values.project_name }}
         ports:
         - containerPort: 8080
